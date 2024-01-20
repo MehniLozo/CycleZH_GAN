@@ -22,7 +22,7 @@ class Disc_block(nn.Module):
     return self.conv(x)
 
 
-class Discriminator(nn.Module):
+class Disc(nn.Module):
   def __init__(self,in_chans = 3,features = [64,128,256,512]):
     super().__init__()
     self.initial = nn.Sequential(
