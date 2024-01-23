@@ -95,3 +95,13 @@ class Gen(nn.Module):
     for layer in self.upbs:
       x = layer(x)
     return torch.tanh(self.end(x))
+
+def testing():
+    img_channels = 3
+    img_size = 256
+    x = torch.randn((2, img_channels, img_size, img_size))
+    gen = Gen(img_channels, 9)
+    print(gen(x).shape)
+
+if __name__ == "__main__":
+  testing()
