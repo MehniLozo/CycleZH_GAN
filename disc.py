@@ -1,3 +1,5 @@
+import torch 
+import torch.nn as nn
 
 class Disc_block(nn.Module):
     # Convolution-InstanceNorm-LeakyReLU -> Ck -> k filters & stride 2
